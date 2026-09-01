@@ -31,4 +31,5 @@
     <string name="no_tienes_una_cuenta">¿No tienes una cuenta?</string>
     <string name="registrarse_ahora">Registrarse ahora</string>
     <string name="bienvenido">Bienvenido a</string>
+    <string name="categorias">Categorias\n</string>
 </resources>
