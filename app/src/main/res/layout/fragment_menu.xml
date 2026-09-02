@@ -96,4 +96,20 @@
         app:layout_constraintTop_toBottomOf="@id/tvNuevo"
         tools:listitem="@layout/item_categoria" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tvOpciones"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="70dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="8dp"
+        android:paddingBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNuevo"
+        tools:listitem="@layout/item_producto" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
