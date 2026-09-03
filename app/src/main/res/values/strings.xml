@@ -13,8 +13,8 @@
     <string name="cafe">Cafe :</string>
     <string name="tvCafe">Cavosh</string>
     <string name="cambiar">Cambiar</string>
-    <string name="nuevo_inicio">Lo nuevo...</string>
-    <string name="txtFrecuentementeOrdenados">Frecuentemente ordenados...</string>
+    <string name="nuevo_inicio">Lo nuevo…</string>
+    <string name="txtFrecuentementeOrdenados">Frecuentemente ordenados…</string>
     <string name="vamos_a_registrarte">Vamos a registrarte!</string>
     <string name="content_description">content_description</string>
     <string name="iniciar_sesion">Iniciar Sesión</string>
@@ -32,4 +32,5 @@
     <string name="registrarse_ahora">Registrarse ahora</string>
     <string name="bienvenido">Bienvenido a</string>
     <string name="categorias">Categorias\n</string>
+    <string name="producto">10 Productos\n</string>
 </resources>

@@ -136,7 +136,7 @@
         android:focusable="true"
         android:elevation="5dp"
         android:src="@drawable/ic_search"
-        app:layout_constraint="@id/svBuscar"
+        app:layout_constraintTop_toTopOf="@id/svBuscar"
         app:layout_constraintBottom_toBottomOf="@id/svBuscar"
         app:layout_constraintEnd_toEndOf="parent"
         app:tint="@color/white"/>
