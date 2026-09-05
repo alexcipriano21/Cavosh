@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">CavoshCafe2026</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="inicio">Inicio</string>
     <string name="menu">Menú</string>
     <string name="favoritos">Favoritos</string>
@@ -33,4 +32,11 @@
     <string name="bienvenido">Bienvenido a</string>
     <string name="categorias">Categorias\n</string>
     <string name="producto">10 Productos\n</string>
+    <string name="micarrito">Mi Carrito</string>
+    <string name="codigo">Codigo Promocional\n</string>
+    <string name="tarjeta">Tarjeta\n</string>
+    <string name="descuento">Descuento\n</string>
+    <string name="total">Total\n</string>
+    <string name="finalizar">Finalizar Compra\n</string>
+    <string name="aplicar">Aplicar</string>
 </resources>
