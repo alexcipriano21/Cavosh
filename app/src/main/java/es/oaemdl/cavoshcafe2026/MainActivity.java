@@ -2,38 +2,45 @@ package es.oaemdl.cavoshcafe2026;
 
 import android.os.Bundle;
 import android.view.View;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import es.oaemdl.cavoshcafe2026.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.nav_host_fragment_activity_main);
 
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
-        NavigationUI.setupWithNavController(binding.navView, navController);
+        if (navHostFragment != null) {
+            NavController navController = navHostFragment.getNavController();
+            BottomNavigationView navView = findViewById(R.id.nav_view);
 
-        navController.addOnDestinationChangedListener((navController1, navDestination, bundle) -> {
-            int id = navDestination.getId();
-            if ( id == R.id.navigation_splash ||id == R.id.navigation_login ||
-                 id == R.id.navigation_registrar || id == R.id.navigation_verificar )
+            // Vincular el menú inferior con la navegación
+            NavigationUI.setupWithNavController(navView, navController);
 
-                //id == R.id.navigation_validar ||
-                //id == R.id.navigation_menuProducto || id == R.id.navigation_menuProductoPersonalizar )
-                navView.setVisibility( View.INVISIBLE );
-        });
+            // Escuchar cambios de pantalla para mostrar u ocultar el menú
+            navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+                int id = destination.getId();
 
+                // Ocultar en Splash, Login y Registrar
+                if (id == R.id.navigation_splash ||
+                        id == R.id.navigation_login ||
+                        id == R.id.navigation_registrar ||
+                        id == R.id.navigation_verificar) {
+
+                    navView.setVisibility(View.GONE);
+                } else {
+                    // Mostrar en Inicio, Menu, Favoritos, Carrito, Perfil, etc.
+                    navView.setVisibility(View.VISIBLE);
+                }
+            });
+        }
     }
 }

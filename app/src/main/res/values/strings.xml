@@ -39,4 +39,5 @@
     <string name="total">Total\n</string>
     <string name="finalizar">Finalizar Compra\n</string>
     <string name="aplicar">Aplicar</string>
+    <string name="hello_blank_fragment">hola</string>
 </resources>

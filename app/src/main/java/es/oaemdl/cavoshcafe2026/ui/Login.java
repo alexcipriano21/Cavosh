@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import es.oaemdl.cavoshcafe2026.R;
 import es.oaemdl.cavoshcafe2026.databinding.FragmentLoginBinding;
 
 public class Login extends Fragment {
@@ -39,6 +40,19 @@ public class Login extends Fragment {
         context = getContext();
         navController = Navigation.findNavController( view );
 
-    }
+        // Ir a Inicio al hacer clic en "Iniciar Sesión"
+        binding.btnIniciarSesion.setOnClickListener(v ->
+                navController.navigate(R.id.action_navigation_login_to_navigation_inicio)
+        );
 
+        // Ir a Registro al hacer clic en la pestaña superior "Registrar"
+        binding.tvRegistrar.setOnClickListener(v ->
+                navController.navigate(R.id.action_navigation_login_to_navigation_registrar)
+        );
+
+        // Ir a Registro al hacer clic en el texto inferior "Registrarse ahora"
+        binding.tvRegistrarAhora.setOnClickListener(v ->
+                navController.navigate(R.id.action_navigation_login_to_navigation_registrar)
+        );
+    }
 }
